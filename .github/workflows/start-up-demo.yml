@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print to Log 1
+        id: var-test
         env:
           GITHUB_CONTEXT: 'this is github context!'
         ##输出环境变量失败，输出库变量成功（vars.REP_PROJECT_NAME）
@@ -18,6 +19,8 @@ jobs:
           echo -n "SELECT_COLOR=red" >> "$GITHUB_OUTPUT"
 
       - name: Get output var - SELECT_COLOR
+        env:
+          SELECT_COLOR: ${{ steps.var-test.outputs.SELECT_COLOR }}
         run: |
           echo -n "$SELECT_COLOR"
         
