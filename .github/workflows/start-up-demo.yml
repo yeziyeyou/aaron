@@ -22,7 +22,8 @@ jobs:
         env:
           SELECT_COLOR: ${{ steps.var-test.outputs.SELECT_COLOR }}
         run: |
-          echo -n "$SELECT_COLOR"
+          echo -n "SELECT_COLOR is $SELECT_COLOR"
+          echo -n "steps.var-test.outputs.SELECT_COLOR is ${{ steps.var-test.outputs.SELECT_COLOR }}"
         
   job2:
     runs-on: ubuntu-latest
