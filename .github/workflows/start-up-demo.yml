@@ -18,4 +18,4 @@ jobs:
     needs: job1
     steps:
       - name: Print to Log 2
-        run: echo -n $DAY_OF_WEEK + ${{env.env_first_key.PROJECT_NAME}} + ${{env.env_first_key}}
+        run: echo -n $DAY_OF_WEEK + ${{env.env_first_key.PROJECT_NAME}} + ${{env.env_first_key}} + ${{context.env_first_key }} + ${{context.env_first_key.PROJECT_NAME }}
