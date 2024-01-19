@@ -11,7 +11,7 @@ jobs:
       - name: Print to Log 1
         env:
           GITHUB_CONTEXT: 'this is github context!'
-        run: echo -n $GITHUB_CONTEXT $DAY_OF_WEEK + ${{env.env_first_key.PROJECT_NAME}} + ${{env.env_first_key}} + ${{ vars.REP_PROJECT_NAME }}
+        run: echo -n $GITHUB_CONTEXT $DAY_OF_WEEK + ${{env.env_first_key.PROJECT_NAME}} + ${{env.env_first_key}} + ${{ vars.REP_PROJECT_NAME }} + ${{env_first_key.PROJECT_NAME}}
         
   job2:
     runs-on: ubuntu-latest
