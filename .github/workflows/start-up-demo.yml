@@ -1,5 +1,6 @@
 name: build
-on: push
+on: 
+  workflow_dispatch:
 
 env:
   DAY_OF_WEEK: Mondy
