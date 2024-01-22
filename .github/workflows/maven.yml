@@ -1,3 +1,5 @@
+# 这定义工作流的名称，它将显示在 GitHub 存储库的“操作”选项卡中。
+name: Java project - Maven Build.
 on:
   workflow_dispatch:
 jobs:
