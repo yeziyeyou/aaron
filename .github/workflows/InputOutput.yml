@@ -1,4 +1,4 @@
-name: remote ssh command
+name: input output testing.
 on: 
   workflow_dispatch:
 jobs:
