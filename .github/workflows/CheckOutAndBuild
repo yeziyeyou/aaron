@@ -1,0 +1,11 @@
+name: input output testing.
+on: 
+  workflow_dispatch:
+
+jobs:
+  job1:
+  - name: Checkout tools repo
+    uses: actions/checkout@v4
+    with:
+      repository: yeziyeyou/aaron
+      path: aaron
