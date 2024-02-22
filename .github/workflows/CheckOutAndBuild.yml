@@ -9,8 +9,7 @@ jobs:
       - name: Checkout tools repo
         uses: actions/checkout@v4
         with:
-          repository: yeziyeyou/aaron
-          path: ./
+          token: ${{ secrets.ACCOUNT_TOKEN }}
       - name: show pwd
         run: pwd
       - name: show dir info
