@@ -1,4 +1,4 @@
-name: input output testing.
+name: checkout project to overflow
 on: 
   workflow_dispatch:
 
